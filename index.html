@@ -127,8 +127,9 @@
                     <div>
 
                         <h4>Description of the Tasks</h4>
-                        <li> <p align="justify"> This track in the IEEE Big Data 2019 Big Data Cup represents the first
-                            of its kind, Machine Learning competition on data streams. The main idea is to build
+                        <ul>
+                        <li> <p align="justify"> This track in the IEEE Big Data 2019 Big Data Cup represents Machine
+                            Learning competition on data streams the first of its kind. The main idea is to build
                             incremental classifiers and provide the predictions for the data instances that are arriving
                             in stream.
                         </p>
@@ -140,16 +141,45 @@
                             exploit these data and get real-time insights on their services and equipment. To be able
                             to extract valuable knowledge from data streams, one must be able to analyze the data as
                             they arrive and make meaningful predictions. For this purpose, we use fast incremental
-                            learners. For batch learners there already exists a community that is organizing various
-                            competitions on machine learning tasks to obtain models with better performance. We want to
-                            introduce the same approach to engage the whole community in solving essential problems in
-                            data stream mining. We propose a new kind of data science competition based on a real-time
-                            prediction setting, using our novel platform on data streams. The examples to predict are
-                            going to be sent in real-time, and the predictions should also be submitted in real-time.
-                            To the best of our knowledge, this will be the first data science competition conducted in
-                            real-time. The task of the competition is to predict network activity, and the data will be
-                            provided from one of our partner companies.</p>
+                            learners. </p>
                         </li>
+                        <li> <p align="justify">
+                            For the purpose of this competition we will explain the principles of online, incremental
+                            learning.
+                            In online
+                            learning, data are not available as static dataset, though data arrive in stream of records
+                            (instances). We assume that records in the data stream arrive in batches (batch can also
+                            have size of one record). We distinguish two types of batches:
+                            <ul>
+                            <li> <b> Initial batch: </b> This batch is used to build and train the initial model. It
+                            is used to avoid cold start problem and as such contains both features and
+                            targets. Initial batch usually has large number of instances.
+                            </li>
+                            <li> <b> Regular batch: </b> Regular batch contains test and training instances. Training instances
+                                contain both features and targets, while test instances contain just features as they
+                                are used to evaluate the quality of the model.
+                            </li>
+                            </ul>
+                            In figure 1 is shown the process of online learning. As mentioned before, we can see the
+                            difference between the initial batch and the regular batches. After building the initial
+                            model based on initial batch, that model is tested on test instances (which do not contain
+                            target value) and in the next batch when training instances are received for previous batch,
+                            model is updated.
+
+                        </p>
+                            <div align="center">
+                            <img src="stream.png" alt="Online Learning" width="1000" height="400" style="padding-bottom:0.5em;" />Figure 1 - Online Learning
+                            </div>
+
+                        </li>
+                            <li>
+                                The goal of the competition is to build models able to predict the future values of the
+                                series with high accuracy while taking into account the evolutionary nature of these
+                                data. These models must be able to learn incrementally and detect changes in order to
+                                adapt to them as soon as they occur. When the competition starts, data will be released
+                                as a data stream. Their models will be evaluated using the evaluation metric, that will
+                                be specified in the detailed competition description.
+                        </ul>
 
                         <br />
 
