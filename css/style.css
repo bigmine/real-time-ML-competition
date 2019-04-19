@@ -524,6 +524,12 @@
 			
 		}
 
+	.justified {
+		padding-left: 0.5em;
+		text-align: justify;
+		text-align-all: justify;
+	}
+
 		ul.alt {
 			list-style: none;
 			padding-left: 0;
