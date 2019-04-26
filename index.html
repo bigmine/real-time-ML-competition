@@ -139,43 +139,53 @@
                                 to receive multiple streams, process them and provide the leader board and live results.
                                 The link to our platform will be provided as soon all the preparations have been finished.
                         </li>
-                        <li class="justified"> Data streams, such as data originated from sensors, have increasingly
-                            gained the interest of researchers and companies and are currently widely studied in data
-                            science. For example, companies in the telecommunication and energy industry are trying to
-                            exploit these data and get real-time insights on their services and equipment. To be able
-                            to extract valuable knowledge from data streams, one must be able to analyze the data as
-                            they arrive and make meaningful predictions. For this purpose, we use fast incremental
-                            learners.
-                        </li>
-                        <li class="justified">
-                            For the purpose of this competition we will explain the principles of online, incremental
-                            learning. In online learning, data are not available as static dataset, though data arrive
-                            in stream of records(instances). We assume that records in the data stream arrive in
-                            batches (batch can also have size of one record). We distinguish two types of batches:
+                        <li class="justified"> Processing data streams is in high demand in recent years due to the
+                            rapid development of IoT and many other technologies that act as data sources. Data are
+                            generated in real-time from a high number of various data sources: sensors, IoT devices,
+                            social networks, applications, bank and market transactions. Building prediction models for
+                            data streams is an essential task due to its importance in real-time decision making
+                            process.  However, this is very challenging because of  the dynamic nature of the data where
+                            instances arrive in high speed and the stream is  often subject to changes. The competition
+                            that we are proposing represents the typical scenario in Data Stream Mining that has
+                            different requirements compared to the traditional batch learning setting.
+                            The most significant ones are :
                             <ul>
-                            <li class="justified"> <b> Initial batch: </b> This batch is used to build and train the initial model. It
-                            is used to avoid cold start problem and as such contains both features and
-                            targets. Initial batch usually has large number of instances.
-                            </li>
-                            <li class="justified">  <b> Regular batch: </b> Regular batch contains test and training instances.
-                                Training instances contain both features and targets, while test instances contain just
-                                features as they are used to evaluate the quality of the model.
-                            </li>
+                                <li>
+                                    <b> Requirement 1 </b> Process an example at a time and inspect it only once at most.
+                                </li>
+                                <li>
+                                    <b> Requirement 2 </b> Use a limited amount of memory.
+                                </li>
+                                <li>
+                                    <b> Requirement 3 </b> Work in a limited amount of time.
+                                </li>
+                                <li>
+                                    <b> Requirement 4 </b> Be ready to predict at any time.
+                                </li>
                             </ul>
                         </li>
-                            <p align="justify">
-                            In figure 1 is shown the process of online learning. As mentioned before, we can see the
-                            difference between the initial batch and the regular batches. After building the initial
-                            model based on initial batch, that model is tested on test instances (which do not contain
-                            target value) and in the next batch when training instances are received for previous batch,
-                            model is updated.
-
-                        </p>  </li>
+                        <li class="justified">
+                            The figure 1 shows how the data stream occurs in Data Stream Mining process. In this setting, data are
+                            not available as static dataset, though data arrive in stream of records (instances).
+                            We assume that records in the data stream arrive in batches (batch can also have size of one
+                            record). We distinguish two types of batches:
+                            <ul>
+                            <li class="justified"> <b> Initial batch: </b> is used to build and train the initial model.
+                                It is used to avoid the cold start problem and as such contains training instances only,
+                                providing both features and true value of targets. Initial batch is usually larger than
+                                regular batches.
+                            </li>
+                            <li class="justified">  <b> Regular batch: </b> provides new test instances and true values
+                                of previous ones. True label values are used to update models whereas test instances are
+                                used to predict future values of the target. All intermediate predictions are used to
+                                evaluate the quality of the model.
+                            </li>
+                            </ul>
                         </ul>
 
 
                     <img src="stream.png" alt="Online Learning" width="1000" height="400" style="padding-bottom:-0.5em;" />
-                        <p align="center">Figure 1 - Online Learning</p>
+                        <p align="center">Figure 1 - Data Stream flow</p>
                     <ul>
 
                     <li class="justified">
