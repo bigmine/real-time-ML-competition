@@ -137,7 +137,7 @@
                                 our novel platform built for those purposes. <b> The Platform For Data Science
                                 Competitions on Data Streams </b>is able to provide multiple streams to multiple users,
                                 to receive multiple streams, process them and provide the leader board and live results.
-                                The link to our platform will be provided as soon all the preparations have been finished.
+                                The link to our platform will be provided as soon as all the preparations have been finished.
                         </li>
                         <li class="justified"> Processing data streams is in high demand in recent years due to the
                             rapid development of IoT and many other technologies that act as data sources. Data are
@@ -160,7 +160,7 @@
                                     <b> Requirement 3 </b> Work in a limited amount of time.
                                 </li>
                                 <li>
-                                    <b> Requirement 4 </b> Process an example at a time and inspect it only once at most.
+                                    <b> Requirement 4 </b> Be ready to predict at any time.
                                 </li>
                             </ul>
                         </li>
@@ -193,8 +193,8 @@
                                 series with high accuracy while taking into account the evolutionary nature of these
                                 data. These models must be able to learn incrementally and detect changes in order to
                                 adapt to them as soon as they occur. When the competition starts, data will be released
-                                as a data stream. Their models will be evaluated using the evaluation metric, that will
-                                be specified in the detailed competition description.
+                                as a data stream. Their models will be evaluated using the evaluation metric, that are
+                                detailed  in <a href="Submit.html"> Submissions </a> section.
                     </p>
                     </li>
                         </ul>
@@ -206,7 +206,24 @@
                         <br />
                     <h4>Important Dates</h4>
 
-                    <li><b>Coming soon... </b></li>
+			<div id="dates"></div>
+			<script type="text/javascript">
+			var importantDates = [{'date': 'May 20, 2019', 'action':'Start promoting competition with an effective advertisement.'},
+					      {'date': 'August 5, 2019', 'action':'Launch website for registration of participants.  Release the starter kit fo participants and schedule 											   trial competitions for them to get used to participating in competitions and using our platform.'},
+                                              {'date': 'September 4 - September 13, 2019', 'action':'The first phase of the competition.  This is the phase where participants will have 													     a chance to get familiar with the platform and train their models. This phase will 												     not affect the final ranking.'},
+					      {'date': 'September 16 - 20, 2019', 'action':'Second phase of the competition.  This is the main phase of the competition. Participants 												    will start receiving the data stream and submitting their predictions. This phase will 												    determine the final ranking. Ranking will be available in real-time.'},
+					      {'date': 'September 23 - 25, 2019', 'action':'Top 3 participants will need to send their code for final validation.'},
+					      {'date': 'September 25 - 30, 2019', 'action':'Validation of the top 3 results and announcement of the final ranking.'}
+					     ];
+			var ul = document.createElement('ul');
+			document.getElementById('dates').appendChild(ul);
+	 
+			importantDates.forEach(function(date){
+				var li = document.createElement('li');
+				ul.appendChild(li);
+				li.innerHTML += "<b>"+ date['date'] +": </b> " + date['action'];
+			});
+			</script>
 
 
 
