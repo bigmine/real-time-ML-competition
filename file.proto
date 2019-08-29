@@ -1,0 +1,38 @@
+
+	syntax = "proto3";
+	option java_package = "ex.grpc";
+	package file;
+
+
+	// The data service definition.
+	service DataStreamer {
+  	// Sends multiple greetings
+  	rpc sendData (stream Prediction) returns (stream Message) {}
+	}
+
+
+	message Message{
+    	int32  rowID =1;
+    	string Day = 2;
+    	string Period = 3;
+    	int32  Target = 4;
+    	string Deadline = 5;
+    	string Released = 6;
+    	string tag=7;
+	}
+
+	message Prediction{
+    	int32 rowID = 1;
+    	int32 Target = 2;
+	}
+
+
+
+
+
+
+
+
+
+
+ 
